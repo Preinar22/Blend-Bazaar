@@ -92,13 +92,18 @@ nav a:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 390px) {
   .container1, .container2, .container3, .container4, .container5, .container6 {
       grid-template-columns: 1fr;
   }
   .description-item {
     font-size: 0.9rem;
     color: #555;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
 }
 
