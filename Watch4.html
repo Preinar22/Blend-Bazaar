@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch 4</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #f5f9fa;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding-left: 300px;
+        }
+
+        header a:hover {
+            color: #3f6efc;
+            text-decoration: underline;
+        }
+
+        .shirt-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 15px 0;
+            background: #f5f9fa;
+        }
+
+        .shirt-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-top: 2px solid #ff7e5f;
+            border-bottom: 2px solid #feb47b;
+            border-radius: 10px;
+        }
+
+        .shirt-details p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .shirt-details button {
+            background-color: #3f6efc;
+            color: #e1e4e5;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .shirt-details button:hover {
+            background-color: #ff7e5f;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #3f6efc;
+            color: #f5f9fa;
+            padding: 20px 0;
+            font-size: 1.2em;
+        }
+
+        footer span {
+            display: inline-block;
+            white-space: nowrap;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-style: italic;
+            animation: slideX 8.5s linear infinite;
+        }
+
+        /* Animacion carrusel */
+        @keyframes slideX {
+            0% {
+                transform: translateX(100%);
+            }
+
+            50% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Estilos responsivos */
+        /* Para pantallas grandes (PC desktop) */
+        @media (min-width: 1024px) {
+            header {
+                justify-content: space-between;
+                padding: 20px 50px;
+            }
+
+            .shirt-details {
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 20px;
+            }
+
+            .shirt-details img {
+                max-width: 40%;
+            }
+
+            .shirt-details p {
+                font-size: 1.5em;
+            }
+
+            .shirt-details button {
+                font-size: 1.2em;
+            }
+        }
+
+        /* Para tablets (pantallas medianas) */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .shirt-details {
+                flex-direction: column;
+                align-items: center;
+                padding: 15px;
+            }
+
+            .shirt-details img {
+                max-width: 70%;
+            }
+
+            .shirt-details p {
+                font-size: 1.3em;
+            }
+
+            .shirt-details button {
+                font-size: 1.1em;
+            }
+        }
+
+        /* Para celulares (pantallas pequeñas) */
+        @media (max-width: 767px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            header a {
+                padding-left: 0;
+                font-size: 1em;
+            }
+
+            .shirt-details {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .shirt-details img {
+                max-width: 90%;
+            }
+
+            .shirt-details p {
+                font-size: 1em;
+            }
+
+            .shirt-details button {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+
+            footer {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Watch 4</h1>
+        <a href="index.html">Go Back</a>
+    </header>
+    <main>
+        <section class="shirt-details">
+            <img src="https://i.pinimg.com/474x/08/8f/5a/088f5aeb1866dcd8ce2deead377a47d1.jpg" alt="Shirt 1 Image">
+            <p>
+                Description of Shirt 1.<br>
+                "Made of stainless steel with sapphire crystal, this watch is water-resistant and features automatic movement, 
+                perfect for daily use and formal occasions. Its adjustable strap and luminous dial ensure functionality and elegance, 
+                adapting to both professional environments and outdoor activities."
+            </p>
+            <p>Price: $49.99</p>
+            <button>Add to Cart</button>
+        </section>
+    </main>
+    <footer>
+        <span>Other Items</span>
+        <span>Other Items</span>
+        <span>Other Items</span>
+        <span>Other Items</span>
+        <span>Other Items</span>
+        <span>Other Items</span>
+        <span>Other Items</span>
+        <span>Other Items</span>
+        <span>Other Items</span>
+    </footer>
+    <div class="container1">
+        <div class="item-card">
+            <h2>Shirt 1</h2>
+            <img src="https://i.pinimg.com/736x/3f/41/ed/3f41ed966feb1ce0a74c3b551c890888.jpg" alt="">
+            <p class="price-item">$12.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Shirt1.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Shirt 2</h2>
+            <img src="https://i.pinimg.com/736x/e5/5a/7f/e55a7feb9abd2a67b8160e26bf9cf698.jpg" alt="">
+            <p class="price-item">$12.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Shirt2.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Shirt 3</h2>
+            <img src="https://i.pinimg.com/736x/02/f0/0c/02f00c0c839133362df694348d17010e.jpg" alt="">
+            <p class="price-item">$12.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Shirt3.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Shirt 4</h2>
+            <img src="https://i.pinimg.com/736x/19/61/87/196187db763f72010d645001dee2c02c.jpg" alt="">
+            <p class="price-item">$12.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Shirt4.html">See more</a>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="item-card">
+            <h2>Pants 1</h2>
+            <img src="https://i.pinimg.com/736x/d8/56/04/d8560470ca849c92f6bc5d5739832c0f.jpg" alt="">
+            <p class="price-item">$14.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Pants1.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Pants 2</h2>
+            <img src="https://m.media-amazon.com/images/I/51iJINbKmBL.UF736,736.jpg" alt="">
+            <p class="price-item">$14.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Pants2.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Pants 3</h2>
+            <img src="https://m.media-amazon.com/images/I/31ybQc7mamL.UF736,736.jpg" alt="">
+            <p class="price-item">$14.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Pants3.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Pants 4</h2>
+            <img src="https://m.media-amazon.com/images/I/318qDDL92VL.UF736,736.jpg" alt="">
+            <p class="price-item">$14.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Pants4.html">See more</a>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="item-card">
+            <h2>Cap 1</h2>
+            <img src="https://i.pinimg.com/474x/5f/42/2d/5f422d58451a11ae62829a16b65ae017.jpg" alt="">
+            <p class="price-item">$10.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Cap1.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Cap 2</h2>
+            <img src="https://i.pinimg.com/474x/e4/a7/56/e4a7569847b258baf6795d881b63c915.jpg" alt="">
+            <p class="price-item">$10.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Cap2.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Cap 3</h2>
+            <img src="https://i.pinimg.com/474x/fd/e1/91/fde191467f48bf4842b62ac6155eb48a.jpg" alt="">
+            <p class="price-item">$10.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Cap3.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Cap 4</h2>
+            <img src="https://i.pinimg.com/474x/58/11/b9/5811b9c63d02b18c638ad532cf8fa8d4.jpg" alt="">
+            <p class="price-item">$10.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Cap4.html">See more</a>
+        </div>
+    </div>
+    <div class="container4">
+        <div class="item-card">
+            <h2>Sneaker 1</h2>
+            <img src="https://i.pinimg.com/474x/70/14/21/7014216a2c9d5b7dec4e863dcd3d7139.jpg" alt="">
+            <p class="price-item">$21.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Shirt1.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Sneaker 2</h2>
+            <img src="https://i.pinimg.com/474x/9c/d8/34/9cd8346498a5c8f2e9da46bcc06ce0e9.jpg" alt="">
+            <p class="price-item">$21.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Sneaker2.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Sneaker 3</h2>
+            <img src="https://m.media-amazon.com/images/I/41Yj7FBcc-L.UF736,736.jpg" alt="">
+            <p class="price-item">$21.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Sneaker3.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Sneaker 4</h2>
+            <img src="https://i.pinimg.com/474x/c3/ba/dd/c3badde57a69271ca2bbbc779554a277.jpg" alt="">
+            <p class="price-item">$21.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Sneaker4.html">See more</a>
+        </div>
+    </div>
+    <div class="container5">
+        <div class="item-card">
+            <h2>Watch 1</h2>
+            <img src="https://m.media-amazon.com/images/I/513AM-Q8cIL.UF736,736.jpg" alt="">
+            <p class="price-item">$49.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Watch1.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Watch 2</h2>
+            <img src="https://i.pinimg.com/474x/de/e5/8f/dee58fcd60de62265d113b63f4c34dff.jpg" alt="">
+            <p class="price-item">$49.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Watch2.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Watch 3</h2>
+            <img src="https://i.pinimg.com/474x/bb/55/2c/bb552cbb02e50141b7651c4c2e56d30f.jpg" alt="">
+            <p class="price-item">$49.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Watch3.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Watch 4</h2>
+            <img src="https://i.pinimg.com/474x/08/8f/5a/088f5aeb1866dcd8ce2deead377a47d1.jpg" alt="">
+            <p class="price-item">$49.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Watch4.html">See more</a>
+        </div>
+    </div>
+    <div class="container6">
+        <div class="item-card">
+            <h2>Ties 1</h2>
+            <img src="https://i.pinimg.com/474x/a2/22/77/a22277862d15d08cf6f0dfd74b98f139.jpg" alt="">
+            <p class="price-item">$15.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Tie1.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Ties 2</h2>
+            <img src="https://i.pinimg.com/474x/3a/4a/fd/3a4afdb11ac300837305eb03a05046a1.jpg" alt="">
+            <p class="price-item">$15.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Tie2.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Ties 3</h2>
+            <img src="https://i.pinimg.com/474x/26/bc/a9/26bca9478cefce54085bfb5989235e9f.jpg" alt="">
+            <p class="price-item">$15.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Tie3.html">See more</a>
+        </div>
+        <div class="item-card">
+            <h2>Ties 4</h2>
+            <img src="https://i.pinimg.com/736x/98/b1/a7/98b1a75e014bae1cd44201423d093321.jpg" alt="">
+            <p class="price-item">$15.99</p>
+            <p class="description-item">Men's Dress Shirt Button Up Shirt Collared All Season Wedding Party Clothing
+                Apparel</p>
+            <a href="Tie4.html">See more</a>
+        </div>
+    </div>
+</body>
+
+</html>
